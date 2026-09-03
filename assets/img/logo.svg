@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldKeyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="keyGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#F59E0B" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Key & House Emblem -->
+  <g transform="translate(10, 6)" filter="url(#keyGlow)">
+    <!-- House Roof with Chimney -->
+    <polygon points="12,11 12,2 17,2 17,7 28,0 48,16 43,18 43,30 13,30 13,18" fill="url(#goldKeyGrad)" />
+    <polygon points="28,0 48,16 8,16" fill="url(#goldKeyGrad)" />
+    <!-- Chimney Left -->
+    <rect x="13" y="2" width="5" height="10" fill="url(#goldKeyGrad)" />
+    <!-- House Body / Key Head -->
+    <rect x="11" y="15" width="34" height="20" rx="3" fill="url(#goldKeyGrad)" />
+    <!-- 4-Pane Window in White -->
+    <rect x="22" y="19" width="5.5" height="5.5" rx="0.8" fill="#FFFFFF" />
+    <rect x="28.5" y="19" width="5.5" height="5.5" rx="0.8" fill="#FFFFFF" />
+    <rect x="22" y="25.5" width="5.5" height="5.5" rx="0.8" fill="#FFFFFF" />
+    <rect x="28.5" y="25.5" width="5.5" height="5.5" rx="0.8" fill="#FFFFFF" />
+    
+    <!-- Key Neck & Shaft -->
+    <rect x="25" y="34" width="6" height="42" rx="1.5" fill="url(#goldKeyGrad)" />
+    <!-- Key Teeth / Bits -->
+    <rect x="30" y="58" width="5" height="4" rx="1" fill="url(#goldKeyGrad)" />
+    <rect x="30" y="65" width="7" height="4.5" rx="1" fill="url(#goldKeyGrad)" />
+    <polygon points="31,74 25,76 28,70" fill="url(#goldKeyGrad)" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(68, 0)">
+    <!-- ALINE -->
+    <text x="0" y="36" font-family="'Outfit', 'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="900" font-size="36" letter-spacing="1" fill="#0F172A">
+      ALINE
+    </text>
+    <!-- BARBOSA -->
+    <text x="0" y="66" font-family="'Outfit', 'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="900" font-size="34" letter-spacing="0.5" fill="#F59E0B">
+      BARBOSA
+    </text>
+    <!-- CORRETORA DE IMÓVEIS -->
+    <text x="2" y="81" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="10.5" letter-spacing="3.2" fill="#334155">
+      CORRETORA DE IMÓVEIS
+    </text>
+  </g>
+</svg>

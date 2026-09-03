@@ -1,0 +1,24 @@
+{
+  "name": "aline-barbosa-imoveis",
+  "version": "1.0.0",
+  "description": "Nova Plataforma Imobiliária Digital & Perícia Judicial - Aline Barbosa Imóveis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node scratch/test_suite.js"
+  },
+  "keywords": [
+    "imoveis",
+    "imobiliaria",
+    "ibirite",
+    "belo-horizonte",
+    "sarzedo",
+    "pericia-judicial",
+    "avaliacao-imobiliaria",
+    "creci",
+    "cnai"
+  ],
+  "author": "Aline Barbosa Imóveis",
+  "license": "ISC"
+}

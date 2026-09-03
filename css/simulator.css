@@ -1,0 +1,295 @@
+/* ==========================================================================
+   ALINE BARBOSA IMÓVEIS - SIMULATOR CSS
+   Interactive Financing Calculator SAC & PRICE with Bank Integration
+   ========================================================================== */
+
+.simulator-wrap {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.simulator-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--accent-gold), var(--secondary));
+}
+
+.simulator-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+}
+
+/* Systems Toggle: SAC vs PRICE */
+.system-toggle-bar {
+  display: inline-flex;
+  background: var(--bg-surface-subtle);
+  padding: 4px;
+  border-radius: var(--radius-full);
+  margin-bottom: 28px;
+}
+
+.system-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--secondary);
+  transition: all var(--transition-fast);
+}
+
+.system-btn.active {
+  background: var(--secondary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Slider Controls */
+.calc-control-group {
+  margin-bottom: 28px;
+}
+
+.calc-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calc-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.calc-display-val {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.calc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--border-light);
+  outline: none;
+  transition: background var(--transition-fast);
+}
+
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+  transition: transform var(--transition-fast);
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.calc-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+  transition: transform var(--transition-fast);
+}
+
+.calc-slider-hints {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Banks Row */
+.bank-partners-section {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-light);
+}
+
+.bank-partners-title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.bank-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+.bank-card {
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: #FFFFFF;
+}
+
+.bank-card:hover, .bank-card.active {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  background: var(--primary-light);
+}
+
+.bank-logo-wrap {
+  height: 38px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bank-logo-wrap img {
+  max-height: 32px;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.bank-rate {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* Result Box / Summary Side */
+.simulator-result-box {
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 100%);
+  border-radius: var(--radius-md);
+  color: #FFFFFF;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-dark);
+}
+
+.sim-summary-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.sim-summary-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.sim-summary-sub {
+  font-size: 0.8125rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.sim-main-installment {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sim-main-label {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94A3B8;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.sim-main-val {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--accent-gold);
+}
+
+.sim-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sim-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #CBD5E1;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+}
+
+.sim-detail-row span:last-child {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.btn-send-sim {
+  width: 100%;
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 800;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition-normal);
+  margin-top: auto;
+}
+
+.btn-send-sim:hover {
+  background: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 960px) {
+  .simulator-grid {
+    grid-template-columns: 1fr;
+  }
+}
