@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>
             Agendar Visita via WhatsApp
           </a>
-          <button class="btn btn-outline" onclick="window.useInSimulator(${prop.price})">Simular Financiamento Deste Imóvel</button>
+          <button class="btn-modal-sim" onclick="window.useInSimulator(${prop.price})">Simular Financiamento</button>
         </div>
       </div>
     `;

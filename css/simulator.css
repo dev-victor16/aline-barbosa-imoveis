@@ -271,12 +271,15 @@
   color: #FFFFFF;
   font-weight: 800;
   padding: 14px 20px;
+  min-height: 50px;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.3;
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
   transition: all var(--transition-normal);
   margin-top: auto;
@@ -291,5 +294,55 @@
 @media (max-width: 960px) {
   .simulator-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .simulator-wrap {
+    padding: 24px 16px;
+    border-radius: var(--radius-md);
+  }
+  .system-toggle-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: var(--radius-sm);
+  }
+  .system-btn {
+    padding: 10px 6px;
+    font-size: 0.78rem;
+    text-align: center;
+    border-radius: var(--radius-sm);
+    line-height: 1.25;
+  }
+  .bank-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .bank-card {
+    padding: 8px 4px;
+  }
+  .bank-logo-wrap {
+    height: 30px;
+  }
+  .bank-rate {
+    font-size: 0.7rem;
+  }
+  .simulator-result-box {
+    padding: 24px 16px;
+  }
+  .sim-main-val {
+    font-size: 1.85rem;
+  }
+  .btn-send-sim {
+    padding: 14px 12px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .bank-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
