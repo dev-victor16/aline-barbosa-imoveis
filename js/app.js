@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `<span class="badge-purpose locacao">Locação</span>`;
 
       return `
-        <article class="property-card" data-id="${p.id}">
+        <article class="property-card" data-id="${p.id}" data-reveal="fade-up">
           <div class="card-image-wrap">
             <img src="${p.images[0]}" alt="${p.title}" class="card-image" loading="lazy" onerror="this.src='assets/img/logo.svg'; this.style.padding='40px';">
             ${purposeBadge}
@@ -144,6 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </article>
       `;
     }).join('');
+
+    // Ativa animação nos novos cards renderizados
+    if (typeof window.refreshScrollObserver === 'function') {
+      window.refreshScrollObserver();
+    }
   }
 
   // 4. WhatsApp Links Formatters
